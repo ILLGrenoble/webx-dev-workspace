@@ -1,0 +1,44 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "build-webx-engine",
+            "type": "shell",
+            "command": "cmake",
+            "args": ["--build", ".", "-j", "4", "--target", "webx-engine"],
+            "options": {
+                "cwd": "${workspaceFolder}/webx-engine"
+            },
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            }
+        },
+        {
+            "label": "build-webx-router",
+            "type": "shell",
+            "command": "$HOME/.cargo/bin/cargo",
+            "args": ["build"],
+            "options": {
+                "cwd": "${workspaceFolder}/webx-router"
+            },
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            }
+        },
+        {
+            "label": "build-webx-session-manager",
+            "type": "shell",
+            "command": "$HOME/.cargo/bin/cargo",
+            "args": ["build"],
+            "options": {
+                "cwd": "${workspaceFolder}/webx-session-manager"
+            },
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            }
+        }
+    ]
+}

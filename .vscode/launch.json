@@ -1,0 +1,64 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Launch and Debug WebX Engine Standalone (:20)",
+      "type": "cppdbg",
+      "request": "launch",
+      "program": "${workspaceFolder}/webx-engine/bin/webx-engine",
+      "args": [ "-k", "fr", "-s" ],
+      "stopAtEntry": false,
+      "cwd": "${workspaceFolder}/webx-engine",
+      "environment": [
+        { "name": "WEBX_ENGINE_LOG", "value": "debug" },
+        { "name": "DISPLAY", "value": ":20" },
+      ],
+      "externalConsole": false,
+      "MIMode": "gdb",
+      "setupCommands": [
+        {
+          "description": "Enable pretty-printing for gdb",
+          "text": "-enable-pretty-printing",
+          "ignoreFailures": true
+        }
+      ],
+      "preLaunchTask": "build-webx-engine"
+    },
+    {
+      "name": "Launch and Debug WebX Router",
+      "type": "lldb",
+      "request": "launch",
+      "program": "${workspaceFolder}/webx-router/target/debug/webx-router",
+      "args": [],
+      "cwd": "${workspaceFolder}/webx-router",
+      "env": {
+        "WEBX_ROUTER_ENGINE_PATH": "/workspaces/webx-dev-workspace/webx-engine/bin/webx-engine"
+      },
+      "preLaunchTask": "build-webx-router"
+    },
+    {
+      "name": "Launch and Debug WebX Session Manager",
+      "type": "lldb",
+      "request": "launch",
+      "program": "${workspaceFolder}/webx-session-manager/target/debug/server",
+      "args": [],
+      "cwd": "${workspaceFolder}/webx-session-manager",
+      "preLaunchTask": "build-webx-session-manager"
+    },
+    {
+      "name": "Debug Running WebX Engine Process",
+      "type": "cppdbg",
+      "request": "attach",
+      "program": "${workspaceFolder}/bin/webx-engine",
+      "processId": "${command:pickProcess}",
+      "MIMode": "gdb",
+      "setupCommands": [
+        {
+          "description": "Enable pretty-printing for gdb",
+          "text": "-enable-pretty-printing",
+          "ignoreFailures": true
+        }
+      ]
+    }
+  ]
+}
