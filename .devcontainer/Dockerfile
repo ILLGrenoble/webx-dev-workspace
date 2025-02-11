@@ -1,4 +1,4 @@
-FROM ghcr.io/illgrenoble/webx-dev-env-ubuntu:22.04
+FROM ghcr.io/illgrenoble/webx-dev-env-ubuntu:24.04
 
 # Install dependencies
 RUN apt install -y apt-utils libclang-dev libpam-dev clang

@@ -4,8 +4,8 @@
             "name": "Linux",
             "includePath": [
                 "${default}",
-                "${workspaceFolder}/src",
-                "${workspaceFolder}/lib"
+                "${workspaceFolder}/webx-engine/src",
+                "${workspaceFolder}/webx-engine/lib"
             ],
             "compilerPath": "/usr/bin/gcc",
             "cStandard": "gnu17",

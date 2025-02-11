@@ -5,6 +5,7 @@
   "overrideCommand": false,
   "postCreateCommand": ".devcontainer/install.sh",
   "forwardPorts": [5555, 5556, 5557, 5558],
+  "runArgs": ["--privileged"],
   "customizations": {
     "vscode": {
       "settings": {

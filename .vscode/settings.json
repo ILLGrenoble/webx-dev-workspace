@@ -66,6 +66,19 @@
     "chunkcopy.h": "c",
     "inffast_chunk.h": "c",
     "unordered_set": "cpp",
-    "future": "cpp"
+    "future": "cpp",
+    "bitset": "cpp",
+    "charconv": "cpp",
+    "compare": "cpp",
+    "complex": "cpp",
+    "concepts": "cpp",
+    "expected": "cpp",
+    "source_location": "cpp",
+    "format": "cpp",
+    "numbers": "cpp",
+    "semaphore": "cpp",
+    "span": "cpp",
+    "stop_token": "cpp",
+    "variant": "cpp"
   }
 }
