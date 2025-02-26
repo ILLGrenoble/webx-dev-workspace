@@ -32,6 +32,7 @@
       "args": [],
       "cwd": "${workspaceFolder}/webx-router",
       "env": {
+        "WEBX_ROUTER_LOGGING": "debug",
         "WEBX_ROUTER_ENGINE_PATH": "/workspaces/webx-dev-workspace/webx-engine/bin/webx-engine"
       },
       "preLaunchTask": "build-webx-router"
@@ -43,13 +44,16 @@
       "program": "${workspaceFolder}/webx-session-manager/target/debug/server",
       "args": [],
       "cwd": "${workspaceFolder}/webx-session-manager",
+      "env": {
+        "WEBX_SESSION_MANAGER_LOGGING": "debug",
+      },
       "preLaunchTask": "build-webx-session-manager"
     },
     {
       "name": "Debug Running WebX Engine Process",
       "type": "cppdbg",
       "request": "attach",
-      "program": "${workspaceFolder}/bin/webx-engine",
+      "program": "${workspaceFolder}/webx-engine/bin/webx-engine",
       "processId": "${command:pickProcess}",
       "MIMode": "gdb",
       "setupCommands": [

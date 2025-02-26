@@ -5,7 +5,7 @@
             "label": "build-webx-engine",
             "type": "shell",
             "command": "cmake",
-            "args": ["--build", ".", "-j", "4", "--target", "webx-engine"],
+            "args": ["--build", ".", "-j", "8", "--target", "webx-engine"],
             "options": {
                 "cwd": "${workspaceFolder}/webx-engine"
             },
