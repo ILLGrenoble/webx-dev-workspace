@@ -45,7 +45,7 @@
       "args": [],
       "cwd": "${workspaceFolder}/webx-session-manager",
       "env": {
-        "WEBX_SESSION_MANAGER_LOGGING": "debug",
+        "WEBX_SESSION_MANAGER_LOGGING_LEVEL": "debug",
       },
       "preLaunchTask": "build-webx-session-manager"
     },
