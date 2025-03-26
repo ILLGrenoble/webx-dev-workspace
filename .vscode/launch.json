@@ -32,7 +32,7 @@
       "args": [],
       "cwd": "${workspaceFolder}/webx-router",
       "env": {
-        "WEBX_ROUTER_LOGGING": "debug",
+        "WEBX_ROUTER_LOGGING_LEVEL": "debug",
         "WEBX_ROUTER_ENGINE_PATH": "/workspaces/webx-dev-workspace/webx-engine/bin/webx-engine"
       },
       "preLaunchTask": "build-webx-router"
