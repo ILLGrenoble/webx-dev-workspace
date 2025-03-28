@@ -63,6 +63,15 @@
           "ignoreFailures": true
         }
       ]
-    }
+    },
+    {
+      "name": "Launch guacd-kbd-translator",
+      "program": "${workspaceFolder}/webx-engine/utils/guacd-kbd-translator/index.js",
+      "args": [ "-o", "../../src/display/input/WebXKeyboardSymbolMapping.h" ],
+      "cwd": "${workspaceFolder}/webx-engine/utils/guacd-kbd-translator",
+      "request": "launch",
+      "type": "node",
+      "console": "integratedTerminal"
+    },
   ]
 }
