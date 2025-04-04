@@ -13,7 +13,7 @@ RUN curl https://sh.rustup.rs -sSf > /tmp/rustup-init.sh \
     && sh /tmp/rustup-init.sh -y \
     && rm -rf /tmp/rustup-init.sh
 
-RUN ~/.cargo/bin/rustup default nightly
+# RUN ~/.cargo/bin/rustup default nightly
 
 # Create standard users
 RUN useradd -m -U -s /bin/bash -p $(openssl passwd -6 'mario') mario \
