@@ -4,6 +4,3 @@
 [submodule "webx-router"]
 	path = webx-router
 	url = https://github.com/ILLGrenoble/webx-router
-[submodule "webx-session-manager"]
-	path = webx-session-manager
-	url = https://github.com/ILLGrenoble/webx-session-manager
