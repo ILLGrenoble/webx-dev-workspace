@@ -38,18 +38,6 @@
       "preLaunchTask": "build-webx-router"
     },
     {
-      "name": "Launch and Debug WebX Session Manager",
-      "type": "lldb",
-      "request": "launch",
-      "program": "${workspaceFolder}/webx-session-manager/target/debug/server",
-      "args": [],
-      "cwd": "${workspaceFolder}/webx-session-manager",
-      "env": {
-        "WEBX_SESSION_MANAGER_LOGGING_LEVEL": "debug",
-      },
-      "preLaunchTask": "build-webx-session-manager"
-    },
-    {
       "name": "Debug Running WebX Engine Process",
       "type": "cppdbg",
       "request": "attach",
