@@ -38,6 +38,18 @@
       "preLaunchTask": "build-webx-router"
     },
     {
+      "name": "Launch and Debug WebX Router CLI",
+      "type": "lldb",
+      "request": "launch",
+      "program": "${workspaceFolder}/webx-router/target/debug/webx-cli",
+      "args": ["create"],
+      "cwd": "${workspaceFolder}/webx-router",
+      "env": {
+        "WEBX_ROUTER_LOGGING_LEVEL": "debug",
+      },
+      "preLaunchTask": "build-webx-router"
+    },
+    {
       "name": "Debug Running WebX Engine Process",
       "type": "cppdbg",
       "request": "attach",
