@@ -6,7 +6,7 @@ This project groups the [WebX Engine](https://github.com/ILLGrenoble/webx-engine
 
 It uses a devcontainer to install a unified development environment with the necessary build and run dependencies (currently based on Ubuntu 24.04).
 
-Primary use is aimed at a VSCode environment and Launch Commands are included to build, run and debug all three projects.
+Primary use is aimed at a VSCode environment and Launch Commands are included to build, run and debug all the projects.
 
 Testing of the WebX projects is most simply done by using the [WebX Demo Deploy](https://github.com/ILLGrenoble/webx-demo-deploy) project. This project runs the WebX Demo in a docker compose stack on the host machine: the WebX Router or WebX Engine processes can be reached directly through exposed ports in the devcontainer.
 
