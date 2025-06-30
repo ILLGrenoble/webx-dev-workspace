@@ -2,9 +2,9 @@
 
 ## Description
 
-This project regroups the [WebX Engine](https://github.com/ILLGrenoble/webx-engine), [WebX Router](https://github.com/ILLGrenoble/webx-router) and [WebX Session Manager](https://github.com/ILLGrenoble/webx-session-manager) projects into a single development workspace.
+This project groups the [WebX Engine](https://github.com/ILLGrenoble/webx-engine) and [WebX Router](https://github.com/ILLGrenoble/webx-router) projects into a single development workspace.
 
-It uses a devcontainer to install a unified development environment with the necessary build and run dependencies (currently based on Ubuntu 22.04).
+It uses a devcontainer to install a unified development environment with the necessary build and run dependencies (currently based on Ubuntu 24.04).
 
 Primary use is aimed at a VSCode environment and Launch Commands are included to build, run and debug all three projects.
 
@@ -12,7 +12,7 @@ Testing of the WebX projects is most simply done by using the [WebX Demo Deploy]
 
 ## Installation
 
-Firstly, obtain the WebX Dev Workspace and the WebX Engine, Router and Session Manager submodules:
+Firstly, obtain the WebX Dev Workspace and the WebX Engine and Router submodules:
 
 ```
 git clone --recursive https://github.com/ILLGrenoble/webx-dev-workspace.git
@@ -26,8 +26,6 @@ cd webx-engine
 git checkout dev
 cd ../webx-router
 git checkout dev
-cd ../webx-session-manager
-git checkout dev
 cd ..
 ```
 
@@ -38,7 +36,7 @@ Open the Dev Workspace project in VSCode and then run the command `Reopen in Con
 This will download the base webx-dev-env container from GitHub: ghcr.io/illgrenoble/webx-dev-env-ubuntu:22.04 and launch the `install.sh` script to:
  - install the Rust environment
  - Setup the Xorg configuration to allow users to run Xorg inside a container
- - Initialise the Web Router and Session Manager configs
+ - Initialise the Web Router config
  - Install some standard users for testing the multiuser environment
 
 ## Building, Running and Debugging the WebX Engine in standalone mode
@@ -75,9 +73,7 @@ cmake --build . -j 4 --target webx-engine
 
 This ensures that the WebX Router has a valid WebX Engine executable.
 
-To build and run the WebX Router, run the VSCode Launch Command <em>Launch and Debug WebX Router</em>. This will compile the webx-router executable and launch it. It should be correctly configured to communicate with the WebX Session Manager and launch the locally-built WebX Engine.
-
-The WebX Session Manager is built and launched similarly: run the Launch Command <em>Launch and Debug WebX Session Manager</em>. Again the Session Manager should be correctly configured to authenticate users, launch Xorg and run Xfce4.
+To build and run the WebX Router, run the VSCode Launch Command <em>Launch and Debug WebX Router</em>. This will compile the webx-router executable and launch it. It should be correctly configured to spawn Xorg and run Xfce4 processes and launch the locally-built WebX Engine.
 
 ### Testing the full WebX server stack
 
@@ -93,7 +89,7 @@ Open a browser at https://localhost and you'll be able set the WebX Host to `hos
 
 The development environment comes with a number of preconfigured users: (mario, luigi, peach, toad, yoshi and bowser) - the password for these users is the same as the username.
 
-When you connect using these users you should see logs for the WebX Session Manager validating the login and launching Xorg and Xfce4. The WebX Router should also show logs of launching the WebX Engine for the user.
+When you connect using these users you should see WebX Router logs validating the login and launching Xorg and Xfce4. It should also show logs of launching the WebX Engine for the user.
 
 ### Debugging WebX Engine in multiuser mode
 
