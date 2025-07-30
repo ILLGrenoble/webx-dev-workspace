@@ -1,7 +1,7 @@
 FROM ghcr.io/illgrenoble/webx-dev-env-ubuntu:24.04
 
 # Install dependencies
-RUN apt install -y apt-utils libclang-dev libpam-dev clang
+RUN apt update && apt install -y apt-utils libclang-dev libpam-dev clang
 
 # Install webx user
 RUN addgroup --system --quiet webx \
