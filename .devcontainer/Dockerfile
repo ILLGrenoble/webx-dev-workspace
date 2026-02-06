@@ -13,8 +13,6 @@ RUN curl https://sh.rustup.rs -sSf > /tmp/rustup-init.sh \
     && sh /tmp/rustup-init.sh -y \
     && rm -rf /tmp/rustup-init.sh
 
-# RUN ~/.cargo/bin/rustup default nightly
-
 # Create standard users
 RUN useradd -m -U -s /bin/bash -p $(openssl passwd -6 'mario') mario \
     && useradd -m -U -s /bin/bash -p $(openssl passwd -6 'luigi') luigi \
@@ -27,3 +25,5 @@ RUN useradd -m -U -s /bin/bash -p $(openssl passwd -6 'mario') mario \
 RUN sed -i 's/console/anybody/g' /etc/X11/Xwrapper.config \
     && echo "needs_root_rights = no" | tee -a /etc/X11/Xwrapper.config \
     && cp /etc/X11/xrdp/xorg.conf /etc/X11/xorg.conf
+
+COPY run_dev_env.sh /usr/bin
