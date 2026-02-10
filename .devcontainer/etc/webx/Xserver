@@ -1,0 +1,8 @@
+#!/bin/bash
+
+set -e
+
+export XCURSOR_SIZE=24
+
+exec Xvfb -screen 0 4096x4096x24 "$@"
+

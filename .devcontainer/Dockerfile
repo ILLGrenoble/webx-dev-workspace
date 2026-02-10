@@ -27,3 +27,8 @@ RUN sed -i 's/console/anybody/g' /etc/X11/Xwrapper.config \
     && cp /etc/X11/xrdp/xorg.conf /etc/X11/xorg.conf
 
 COPY run_dev_env.sh /usr/bin
+
+RUN mkdir /etc/webx
+COPY etc/webx/webx-router-config.yml /etc/webx
+COPY etc/webx/Xserver /etc/webx
+COPY etc/webx/startwm.sh /etc/webx
