@@ -14,7 +14,7 @@ export XCURSOR_SIZE=24
 # /usr/bin/run_wm.sh -w 1920 -h 1080 $@ &
 
 # Run using Xvfb with a large framebuffer
-/usr/bin/run_wm.sh -w 8192 -h 8192 -x Xvfb $@ &
+/usr/bin/run_wm.sh -w 4096 -h 4096 -x Xvfb $@ &
 
 sleep 5
 export DISPLAY=:20
