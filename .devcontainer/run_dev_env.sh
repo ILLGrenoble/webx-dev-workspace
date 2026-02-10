@@ -10,7 +10,7 @@ trap 'cleanup' SIGINT
 
 export XCURSOR_SIZE=24
 
-# Use standard xrdp-xorg
+# # Use standard xrdp-xorg
 # /usr/bin/run_wm.sh -w 1920 -h 1080 $@ &
 
 # Run using Xvfb with a large framebuffer
@@ -26,6 +26,9 @@ MODE_DETAILS=$(cvt $WIDTH $HEIGHT 60.0 | sed -n 's/Modeline "\(.*\)_.*"\(.*\)/\1
 xrandr --newmode $MODE_DETAILS
 xrandr --addmode $OUTPUT ${WIDTH}x${HEIGHT}
 xrandr --output $OUTPUT --mode ${WIDTH}x${HEIGHT}
+
+# # Use standard Xvfb
+# /usr/bin/run_wm.sh -x Xvfb $@ &
 
 wait $!
 
